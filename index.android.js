@@ -12,50 +12,20 @@ StyleSheet,
 FlatList,
 Button,
 TextInput,
-Navigator,
+NavigatorIOS,
  Text,
   View ,
   ScrollView}
   from 'react-native';
-import SimpleButton from './src/SimpleButton';
-import SimpleListView from './src/SimpleListView';
-import ListViewGrid from './src/ListViewGrid';
-import NavigatorDemo from './src/NavigatorDemo'
-
+import { StackNavigator } from 'react-navigation';
+import App from './src/App';
 
 export default class HelloWorld extends Component {
-  constructor(props){
-      super(props);
-
-    }
-    _renderScene(route,navigator){
-      let name=route.name;
-      switch (name) {
-        case 'SimpleButton':
-          return <SimpleButton/>;
-          break;
-        case 'ListViewGrid':
-          return <ListViewGrid/>;
-          break;
-
-      }
-    }
-
-    render(){
-      return(
-        <View>
-        <Navigator
-        renderScene={this._renderScene.bind(this)}
-        initialRoute={{name:'SimpleButton'}}
-        />
-        </View>
-
-      )
-    }
-  }
 
 
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+ }
+
+AppRegistry.registerComponent('HelloWorld', () => App);
 
   // render() {
   //   return (
@@ -127,28 +97,28 @@ AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
 
 
 
-// const styles=StyleSheet.create({
-//   bigblue:{
-//     backgroundColor:'red',
-//     color:'blue',
-//     flex:1,
-//     fontSize: 40,
-//   },
-//   bigred:{
-//     backgroundColor:'blue',
-//     color:'red',
-//     flex:3,
-//     fontSize: 40,
-//   },
-//   container:{
-//     flex:1,
-//     padding :16
-//   },
-//   item:{
-//     color:'red',
-//     fontSize:14,
-//     height:40,
-//   },
-// });
+const styles=StyleSheet.create({
+  bigblue:{
+    backgroundColor:'red',
+    color:'blue',
+    flex:1,
+    fontSize: 40,
+  },
+  bigred:{
+    backgroundColor:'blue',
+    color:'red',
+    flex:3,
+    fontSize: 40,
+  },
+  container:{
+    flex:1,
+    padding :16
+  },
+  item:{
+    color:'red',
+    fontSize:14,
+    height:40,
+  },
+});
 
 // skip this line if using Create React Native App

@@ -29,8 +29,12 @@ import {
   }
   _renderRow(dataSource){
     return(
+
       <View  style={styles.box}>
       <Text>{dataSource}</Text>
+      <Text>
+      {this.props.navigation.state.params.thamso}
+      </Text>
       </View>
 
     );
