@@ -18,13 +18,37 @@ NavigatorIOS,
   ScrollView}
   from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import App from './src/App';
+
+import App from './components/App';
 
 export default class HelloWorld extends Component {
 
 
  }
 
+ const styles=StyleSheet.create({
+   bigblue:{
+     backgroundColor:'red',
+     color:'blue',
+     flex:1,
+     fontSize: 40,
+   },
+   bigred:{
+     backgroundColor:'blue',
+     color:'red',
+     flex:3,
+     fontSize: 40,
+   },
+   container:{
+     flex:1,
+     padding :16
+   },
+   item:{
+     color:'red',
+     fontSize:14,
+     height:40,
+   },
+ });
 AppRegistry.registerComponent('HelloWorld', () => App);
 
   // render() {
@@ -97,28 +121,5 @@ AppRegistry.registerComponent('HelloWorld', () => App);
 
 
 
-const styles=StyleSheet.create({
-  bigblue:{
-    backgroundColor:'red',
-    color:'blue',
-    flex:1,
-    fontSize: 40,
-  },
-  bigred:{
-    backgroundColor:'blue',
-    color:'red',
-    flex:3,
-    fontSize: 40,
-  },
-  container:{
-    flex:1,
-    padding :16
-  },
-  item:{
-    color:'red',
-    fontSize:14,
-    height:40,
-  },
-});
 
 // skip this line if using Create React Native App
